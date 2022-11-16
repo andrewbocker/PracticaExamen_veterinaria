@@ -20,7 +20,11 @@ public class Mascota {
     private String IDMascota;
     private String IDdoctor;
 
+    // Constructor vacio
     
+    public mascota(){
+    }
+        
     //Constructor de la calse
     public mascota(String nombreMascota, String fechaNacimiento, String razaMascota, String marcaAlimento, String estadoCastracion, String cedulaDueno, String diagnostico, String IDMascota, String IDdoctor) {
         this.nombreMascota = nombreMascota;
