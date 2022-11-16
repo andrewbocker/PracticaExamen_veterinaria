@@ -22,11 +22,13 @@ public class Mascota {
 
     // Constructor vacio
     
-    public mascota(){
+    public Mascota(){
     }
         
     //Constructor de la calse
-    public mascota(String nombreMascota, String fechaNacimiento, String razaMascota, String marcaAlimento, String estadoCastracion, String cedulaDueno, String diagnostico, String IDMascota, String IDdoctor) {
+    public Mascota(String nombreMascota, String fechaNacimiento, 
+            String razaMascota, String marcaAlimento, String estadoCastracion, 
+            String cedulaDueno, String diagnostico, String IDMascota, String IDdoctor) {
         this.nombreMascota = nombreMascota;
         this.fechaNacimiento = fechaNacimiento;
         this.razaMascota = razaMascota;

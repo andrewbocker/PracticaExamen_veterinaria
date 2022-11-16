@@ -14,15 +14,15 @@ public class Dueño {
     private String apellidos;
     private String cedula;
     private String numerotelefono;
-    private String IDdueno;
+    
     
     public Dueño(String nombre, String apellidos, String cedula, 
-            String numerotelefono, String IDdueno){
+            String numerotelefono){
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.cedula = cedula;
         this.numerotelefono = numerotelefono;
-        this.IDdueno = IDdueno;
+        
     }
     public String getNombre(){
         return nombre;
@@ -36,9 +36,6 @@ public class Dueño {
     public String getNumeroTelefono(){
         return numerotelefono;
     }
-    public String getID(){
-        return IDdueno;
-    }
     
     public void setNombre(String nombre){
         this.nombre = nombre;
@@ -51,9 +48,6 @@ public class Dueño {
     }
     public void setNumeroTelefono(String numerotelefono){
         this.numerotelefono = numerotelefono;
-    }
-    public void setID(String IDdueno){
-        this.IDdueno = IDdueno;
     }
     
 }
