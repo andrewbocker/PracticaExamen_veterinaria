@@ -90,8 +90,65 @@ public class Sede {
         
         
     }
-        
-
     
+        
+    public void AgregarMascota() {
+        for (int i = 0; i < mascotas.length; i++) {
+            if (mascotas[i].getNombreMascota() == null) {
+                String Nombre = JOptionPane.showInputDialog("Ingrese el "
+                        + "nombre de la mascota:");
+                String FechaN = JOptionPane.showInputDialog("Ingrese la "
+                        + "fecha de nacimiento de la mascota:");
+                String Raza = JOptionPane.showInputDialog("Ingrese la raza:");
+                String MarcaAl = JOptionPane.showInputDialog("Ingrese la "
+                        + "marca del almento que consume:");
+                String Castrado = JOptionPane.showInputDialog("La mascota "
+                        + "esta castrada, responda con si o no:");
+                String cedDueño = JOptionPane.showInputDialog("Ingrese la "
+                        + "cédula del dueño");
+                String Diagnostico = JOptionPane.showInputDialog("Ingrese "
+                        + "el diagnostico:");
+                String ID = JOptionPane.showInputDialog("Ingrese "
+                        + "el ID de la mascota:");
+
+                String IDDoc = JOptionPane.showInputDialog("Ingrese el ID "
+                        + "del doctor:");
+                mascotas[i] = new Mascota(Nombre, FechaN,
+                        Raza, MarcaAl, Castrado,
+                        cedDueño, Diagnostico, ID,
+                        IDDoc);
+                
+                JOptionPane.showMessageDialog(null, "Mascota "
+                        + "guardada con exito :)");
+                JOptionPane.showMessageDialog(null, "Nombre de la "
+                        + "mascota: " + mascotas[i].getNombreMascota()
+                        + "\nFecha de nacimiento: " + mascotas[i].getFechaNacimiento()
+                        + "\nRaza: " + mascotas[i].getRazaMascota()
+                        + "\nMarca de alimento: " + mascotas[i].getMarcaAlimento()
+                        + "\nEstado de castración:" + mascotas[i].getMarcaAlimento()
+                        + "\nCedula del Dueño:" + mascotas[i].getCedulaDueno()
+                        + "\nDiagnostico:" + mascotas[i].getDiagnostico()
+                        + "\nID de la mascota:" + mascotas[i].getIDMascota()
+                        + "\nID del Doctor:" + mascotas[i].getIDdoctor());
+            }
+        }
+    }
+
+    public void MostrarMascotasSede() {
+        for (int i = 0; i < mascotas.length; i++) {
+            JOptionPane.showMessageDialog(null, "Nombre de la "
+                    + "mascota: " + mascotas[i].getNombreMascota()
+                    + "\nFecha de nacimiento: " + mascotas[i].getFechaNacimiento()
+                    + "\nRaza: " + mascotas[i].getRazaMascota()
+                    + "\nMarca de alimento: " + mascotas[i].getMarcaAlimento()
+                    + "\nEstado de castración:" + mascotas[i].getMarcaAlimento()
+                    + "\nCedula del Dueño:" + mascotas[i].getCedulaDueno()
+                    + "\nDiagnostico:" + mascotas[i].getDiagnostico()
+                    + "\nID de la mascota:" + mascotas[i].getIDMascota()
+                    + "\nID del Doctor:" + mascotas[i].getIDdoctor());
+        }
+    }
+        
+   
 
 }
