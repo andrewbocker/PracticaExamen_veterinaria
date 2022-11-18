@@ -148,7 +148,14 @@ public class Sede {
                     + "\nID del Doctor:" + mascotas[i].getIDdoctor());
         }
     }
-        
-   
+        //punto i
+   public void AgregarDiagnostico() {
+        String ID = JOptionPane.showInputDialog("Ingrese el ID de la mascota: ");
+        String Diagnostico = JOptionPane.showInputDialog("Ingrese el diagnostico de la mascota: ");
+
+        JOptionPane.showMessageDialog(null, "Nuevo diagnostico "
+                + "registrado" + Diagnostico + "para la mascota " + ID);
+
+    }
 
 }
