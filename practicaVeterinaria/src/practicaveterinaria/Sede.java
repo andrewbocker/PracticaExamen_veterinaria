@@ -165,16 +165,18 @@ public class Sede {
 
     public void MostrarMascotasSede() {
         for (int i = 0; i < mascotas.length; i++) {
-            JOptionPane.showMessageDialog(null, "Nombre de la "
-                    + "mascota: " + mascotas[i].getNombreMascota()
-                    + "\nFecha de nacimiento: " + mascotas[i].getFechaNacimiento()
-                    + "\nRaza: " + mascotas[i].getRazaMascota()
-                    + "\nMarca de alimento: " + mascotas[i].getMarcaAlimento()
-                    + "\nEstado de castración:" + mascotas[i].getMarcaAlimento()
-                    + "\nCedula del Dueño:" + mascotas[i].getCedulaDueno()
-                    + "\nDiagnostico:" + mascotas[i].getDiagnostico()
-                    + "\nID de la mascota:" + mascotas[i].getIDMascota()
-                    + "\nID del Doctor:" + mascotas[i].getIDdoctor());
+            if (mascotas[i].getNombreMascota() != null) {
+                JOptionPane.showMessageDialog(null, "Nombre de la "
+                + "mascota: " + mascotas[i].getNombreMascota()
+                + "\nFecha de nacimiento: " + mascotas[i].getFechaNacimiento()
+                + "\nRaza: " + mascotas[i].getRazaMascota()
+                + "\nMarca de alimento: " + mascotas[i].getMarcaAlimento()
+                + "\nEstado de castración:" + mascotas[i].getMarcaAlimento()
+                + "\nCedula del Dueño:" + mascotas[i].getCedulaDueno()
+                + "\nDiagnostico:" + mascotas[i].getDiagnostico()
+                + "\nID de la mascota:" + mascotas[i].getIDMascota()
+                + "\nID del Doctor:" + mascotas[i].getIDdoctor());
+            }
         }
     }
         //punto f
