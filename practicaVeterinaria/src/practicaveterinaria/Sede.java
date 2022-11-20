@@ -148,6 +148,29 @@ public class Sede {
                     + "\nID del Doctor:" + mascotas[i].getIDdoctor());
         }
     }
+        //punto f
+        public void MostrarInfoMascota() {
+        for (int i = 0; i < mascotas.lenght; i++) {
+            String idMascota = JOptionPane.showInputDialog(null,
+                    "Ingrese el ID de la mascota");
+
+            if (mascotas[i].getIDMascota() == idMascota) {
+                JOptionPane.showMessageDialog(null, "La informacion"
+                        + "de la mascota con codigo ID: " + idMascota + " es: \n"
+                        + "Nombre: " + mascotas[i].getNombreMascota() + " \n"
+                        + "Fecha de nacimiento: " + mascotas[i].getFechaNacimiento() + "\n"
+                        + "Raza: " + mascotas[i].getRazaMascota() + "\n"
+                        + " Marca alimento: " + mascotas[i].getMarcaAlimento() + "\n"
+                        + "Estado de castracion: " + mascotas[i].getEstadoCastracion() + "\n"
+                        + "Cedula dueño: " + mascotas[i].getCedulaDueno() + "\n"
+                        + "Diagnostico: " + mascotas[i].getDiagnostico() + "\n"
+                        + "ID Mascota: " + mascotas[i].getIDMascota() + "\n"
+                        + "ID doctor " + mascotas[i].getIDdoctor() + "\n");
+
+            }    
+        }
+    }
+    
         //punto i
    public void AgregarDiagnostico() {
         String ID = JOptionPane.showInputDialog("Ingrese el ID de la "
