@@ -150,11 +150,19 @@ public class Sede {
     }
         //punto i
    public void AgregarDiagnostico() {
-        String ID = JOptionPane.showInputDialog("Ingrese el ID de la mascota: ");
-        String Diagnostico = JOptionPane.showInputDialog("Ingrese el diagnostico de la mascota: ");
+        String ID = JOptionPane.showInputDialog("Ingrese el ID de la "
+                + "mascota: ");
+        String Diagnostico = JOptionPane.showInputDialog("Ingrese el "
+                + "diagnostico de la mascota: ");
 
-        JOptionPane.showMessageDialog(null, "Nuevo diagnostico "
-                + "registrado" + Diagnostico + "para la mascota " + ID);
+        for (int i = 0; i < mascotas.length; i++) {
+            if (mascotas[i].getIDMascota() == ID) {
+                mascotas[i].setDiagnostico(Diagnostico);
+                JOptionPane.showMessageDialog(null, "Nuevo diagnostico "
+                        + "registrado" + Diagnostico + "para la mascota " + ID);
+
+            }
+        }
 
     }
 
