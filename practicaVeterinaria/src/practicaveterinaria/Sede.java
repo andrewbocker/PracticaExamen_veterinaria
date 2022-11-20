@@ -97,9 +97,20 @@ public class Sede {
         }
     }
     
-    public void MostrarInfoDueño(){
-        
-        
+    public void MostrarInfoDueño() {
+        String IDdueno = JOptionPane.showInputDialog(null,
+                "Ingrese la cedula del dueño:");
+        for (int i = 0; i < dueños.length; i++) {
+            if (IDdueno == dueños[i].getCedula()) {
+                JOptionPane.showMessageDialog(null, "La informacion"
+                        + "del dueno con cedula: C" + IDdueno + " es:\n"
+                        + "Nombre: " + dueños[i].getNombre() + " \n"
+                        + "Apellidos: "
+                        + dueños[i].getApellidos() + "\n"
+                        + "Numero de telefono:" + dueños[i].getNumeroTelefono());
+            }
+            
+        }
     }
     
         
@@ -181,10 +192,9 @@ public class Sede {
     }
         //punto f
         public void MostrarInfoMascota() {
+        String idMascota = JOptionPane.showInputDialog(null,
+                "Ingrese el ID de la mascota");
         for (int i = 0; i < mascotas.length; i++) {
-            String idMascota = JOptionPane.showInputDialog(null,
-                    "Ingrese el ID de la mascota");
-
             if (mascotas[i].getIDMascota() == idMascota) {
                 JOptionPane.showMessageDialog(null, "La informacion"
                         + "de la mascota con codigo ID: " + idMascota + " es: \n"
@@ -198,11 +208,12 @@ public class Sede {
                         + "ID Mascota: " + mascotas[i].getIDMascota() + "\n"
                         + "ID doctor " + mascotas[i].getIDdoctor() + "\n");
 
-            }    
+            }
         }
     }
     
         //punto i
+        
    public void AgregarDiagnostico() {
         String ID = JOptionPane.showInputDialog("Ingrese el ID de la "
                 + "mascota: ");
@@ -257,4 +268,48 @@ public class Sede {
         }
     }
 
+        public void InfoDuenoConIDmascota() {
+        String busqueda = JOptionPane.showInputDialog("Ingrese el "
+                + "ID de la mascota para mostrar la informacion del dueno: ");
+
+        for (int i = 0; i < mascotas.length; i++) {
+            if (mascotas[i].getIDMascota() == busqueda) {
+                mascotas[i].getCedulaDueno();
+            }
+        }
+        for (int i = 0; i < dueños.length; i++) {
+            if (mascotas[i].getCedulaDueno() == dueños[i].getCedula()) {
+                JOptionPane.showMessageDialog(null, "Nombre dueno:"
+                        + dueños[i].getNombre() + "\nApellidos:" + dueños[i].getApellidos()
+                        + "\nCedula:" + dueños[i].getCedula() + "\nNumero de telefono:"
+                        + dueños[i].getNumeroTelefono());
+            }
+        }
+    }
+    
+    public void InfoMascotaConIDdueno() {
+        String busqueda = JOptionPane.showInputDialog("Ingrese la cedula "
+                + "del dueño para mostrar la informacion de la mascota:");
+
+        for (int i = 0; i < dueños.length; i++) {
+            if (dueños[i].getCedula() == busqueda) {
+                dueños[i].getCedula();
+            }
+        }
+        for (int i = 0; i < mascotas.length; i++) {
+            if (dueños[i].getCedula() == mascotas[i].getCedulaDueno()) {
+                JOptionPane.showMessageDialog(null, "Nombre de la "
+                        + "mascota: " + mascotas[i].getNombreMascota()
+                        + "\nFecha de nacimiento: " + mascotas[i].getFechaNacimiento()
+                        + "\nRaza: " + mascotas[i].getRazaMascota()
+                        + "\nMarca de alimento: " + mascotas[i].getMarcaAlimento()
+                        + "\nEstado de castración:" + mascotas[i].getMarcaAlimento()
+                        + "\nCedula del Dueño:" + mascotas[i].getCedulaDueno()
+                        + "\nDiagnostico:" + mascotas[i].getDiagnostico()
+                        + "\nID de la mascota:" + mascotas[i].getIDMascota()
+                        + "\nID del Doctor:" + mascotas[i].getIDdoctor());
+            }
+        }
+    }
+    
 }
