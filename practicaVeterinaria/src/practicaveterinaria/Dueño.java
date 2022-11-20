@@ -15,7 +15,9 @@ public class Dueño {
     private String cedula;
     private String numerotelefono;
     
-    
+    public Dueño() {
+    }
+
     public Dueño(String nombre, String apellidos, String cedula, 
             String numerotelefono){
         this.nombre = nombre;
