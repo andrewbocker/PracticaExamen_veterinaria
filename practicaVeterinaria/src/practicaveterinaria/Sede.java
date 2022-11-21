@@ -100,6 +100,7 @@ public class Sede {
     public void MostrarInfoDueño() {
         String IDdueno = JOptionPane.showInputDialog(null,
                 "Ingrese la cedula del dueño:");
+        boolean existe = false;
         for (int i = 0; i < dueños.length; i++) {
             if (IDdueno == dueños[i].getCedula()) {
                 JOptionPane.showMessageDialog(null, "La informacion"
@@ -108,8 +109,12 @@ public class Sede {
                         + "Apellidos: "
                         + dueños[i].getApellidos() + "\n"
                         + "Numero de telefono:" + dueños[i].getNumeroTelefono());
-            }
-            
+            existe = true;
+            }  
+        }
+        if (existe == false){
+            JOptionPane.showMessageDialog(null, "No hay ningun"
+                    + "dueño registrado bajo la cedula "+IDdueno);
         }
     }
     
@@ -194,6 +199,7 @@ public class Sede {
         public void MostrarInfoMascota() {
         String idMascota = JOptionPane.showInputDialog(null,
                 "Ingrese el ID de la mascota");
+        boolean existe = false;
         for (int i = 0; i < mascotas.length; i++) {
             if (mascotas[i].getIDMascota() == idMascota) {
                 JOptionPane.showMessageDialog(null, "La informacion"
@@ -207,9 +213,12 @@ public class Sede {
                         + "Diagnostico: " + mascotas[i].getDiagnostico() + "\n"
                         + "ID Mascota: " + mascotas[i].getIDMascota() + "\n"
                         + "ID doctor " + mascotas[i].getIDdoctor() + "\n");
-
+              existe = true;
             }
         }
+            if (existe == false){
+                JOptionPane.showMessageDialog(null, "No hay ninguna"
+                    + "mascota bajo ese ID"+ idMascota);    
     }
     
         //punto i
