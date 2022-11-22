@@ -17,8 +17,8 @@ public class main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int e = 0;
-        while (e == 0) {
+        int W = 0;
+        while (W == 0) {
             int opcion = Integer.parseInt(JOptionPane.showInputDialog(
                     "_______Bienvenid@_______\nIngrese la opcion que desea:"
                     + "\n1.Agregar la sede.\n2.Salir del programa."));
@@ -29,11 +29,12 @@ public class main {
                         + "la localizacion de la sede:");
                 Sede sede1 = new Sede(NumSede, Localizacion, null,
                         null, null);
-                int j = 0;
-                while (j == 0) {
+                int Z = 0;
+                while (Z == 0) {
                     int opcion2 = Integer.parseInt(JOptionPane.showInputDialog(
-                            "Ingrese la opcion que desea:\n1.Agregar cliente(dueño)."
-                            + "\n2.Agregar paciente(mascota).\n3.Agregar doctor"
+                            "Ingrese la opcion que desea:"
+                            + "\n1.Agregar cliente(dueño)."
+                            + "\n2.Agregar doctor.\n3.Agregar paciente(mascota)"
                             + "\n4.Mostrar toda la información del cliente."
                             + "\n5.Mostrar toda la información de una mascota."
                             + "\n6.Mostrar la información del dueño dado el ID de "
@@ -41,16 +42,16 @@ public class main {
                             + "dado la cedula del dueño."
                             + "\n8.Agregar un diagnóstico a una mascota dado un ID."
                             + "\n9.Mostrar todas las mascotas de la sede."
-                            + "\n10.Salir del submenu"));
+                            + "\n10.Salir del programa"));
 
                     if (opcion2 == 1) {
                         sede1.AgregarDueño();
                     }
                     if (opcion2 == 2) {
-                        sede1.AgregarMascota();
+                        sede1.AgregarDoctor();
                     }
                     if (opcion2 == 3) {
-                        sede1.AgregarDoctor();
+                        sede1.AgregarMascota();
                     }
                     if (opcion2 == 4) {
                         sede1.MostrarInfoDueño();
@@ -62,7 +63,7 @@ public class main {
                         sede1.InfoDuenoConIDmascota();
                     }
                     if (opcion2 == 7) {
-                        sede1.AgregarDoctor();
+                        sede1.InfoMascotaConIDdueno();
                     }
                     if (opcion2 == 8) {
                         sede1.AgregarDiagnostico();
@@ -72,9 +73,11 @@ public class main {
                     }
                     if (opcion2 == 10) {
                         JOptionPane.showMessageDialog(null, "Gracias"
-                                + " por utilizar el sisitema :)");
-                        j = 1;
-                    } if (opcion2 ==0 ||opcion2 >10 ) {
+                                + " por utilizar el sistema :)");
+                        Z = 1;
+                        W = 1;
+                    }
+                    if (opcion2 == 0 || opcion2 > 10) {
                         JOptionPane.showMessageDialog(null, "Opcion "
                                 + "invalida, intente de nuevo");
                     }
@@ -82,15 +85,15 @@ public class main {
             }
             if (opcion == 2) {
                 JOptionPane.showMessageDialog(null, "Gracias"
-                        + " por utilizar el sisitema :)");
-                e = 1;
-            } if (opcion == 0 ||opcion >2) {
+                        + " por utilizar el sistema :)");
+                W = 1;
+            }
+            if (opcion == 0 || opcion > 2) {
                 JOptionPane.showMessageDialog(null, "Opcion "
                         + "invalida, intente de nuevo");
             }
         }
     }
 
-}
-    
+}    
 
